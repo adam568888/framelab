@@ -211,3 +211,62 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 @keyframes marqueeSlide{to{transform:translateX(-33.333%)}}
 @media(max-width:800px){.cursor-glow{display:none}.ambient-orb{width:180px;height:180px}.ticker>div{animation-duration:35s}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none}.ticker>div{animation:none}.cursor-glow,.ambient-orb{display:none}.hero-art{transform:none!important}}
+/* FRAMELAB - OFFRES ET TARIFS */
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.pricing-card {
+  background: linear-gradient(145deg, #32315a, #232544);
+  border: 1px solid #66618f88;
+  border-radius: 20px;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  min-height: 310px;
+  transition: transform .35s, border-color .35s,
+              box-shadow .35s;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  border-color: #ffce67;
+  box-shadow: 0 20px 48px #07071d77;
+}
+
+.pricing-card h3 {
+  font: 600 1.25rem var(--display);
+  margin-bottom: 12px;
+}
+
+.pricing-price {
+  font: 700 2.6rem var(--display);
+  color: #ffce67;
+  margin-bottom: 18px;
+}
+
+.pricing-card p:not(.eyebrow) {
+  color: #cbd0ea;
+  font-size: .88rem;
+  margin-bottom: 25px;
+}
+
+.pricing-card .button {
+  margin-top: auto;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}
