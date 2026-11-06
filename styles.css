@@ -211,62 +211,37 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 @keyframes marqueeSlide{to{transform:translateX(-33.333%)}}
 @media(max-width:800px){.cursor-glow{display:none}.ambient-orb{width:180px;height:180px}.ticker>div{animation-duration:35s}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none}.ticker>div{animation:none}.cursor-glow,.ambient-orb{display:none}.hero-art{transform:none!important}}
-/* FRAMELAB - OFFRES ET TARIFS */
 
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
+/* Paiement & contact — FrameLab Motion Edition */
+.nav-contact{color:#65e8ef!important;font-weight:700}
+.payment-section{position:relative;overflow:hidden;background:radial-gradient(ellipse at 12% 15%,#a994ff22,transparent 46%),radial-gradient(ellipse at 90% 75%,#ff719a18,transparent 45%),#191a38;border-top:1px solid #a994ff44}
+.payment-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.payment-card{position:relative;overflow:hidden;min-height:280px;padding:30px;border:1px solid #a994ff60;border-radius:22px;background:linear-gradient(145deg,#32325a,#252644);transition:transform .35s,border-color .35s,box-shadow .35s}
+.payment-card:hover{transform:translateY(-9px);border-color:#65e8ef;box-shadow:0 22px 55px #05051555,0 0 25px #65e8ef18}
+.payment-card-highlight{background:linear-gradient(145deg,#57375d,#2a264b);border-color:#ff719a88}
+.payment-symbol{display:grid;place-items:center;width:50px;height:50px;border-radius:15px;color:#1b1735;background:linear-gradient(120deg,#65e8ef,#a994ff);font-size:1.65rem;font-weight:700;margin-bottom:26px;box-shadow:0 8px 25px #65e8ef30}
+.payment-card-highlight .payment-symbol{background:linear-gradient(120deg,#ffce67,#ff719a)}
+.payment-label,.payment-kicker{font-size:.72rem;letter-spacing:1.8px;font-weight:700;color:#c7c2f5}
+.payment-card h3{font:600 1.45rem var(--display);margin:10px 0}
+.payment-card p:last-child{color:#d2d1e9;font-size:.9rem;margin:0}
+.payment-bottom{margin-top:24px;padding:28px 30px;border-radius:20px;border:1px solid #a994ff55;background:#ffffff0b;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.payment-bottom .button{flex-shrink:0}
+.payment-methods{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+.payment-methods span{display:inline-block;padding:9px 14px;border-radius:999px;background:#a994ff22;border:1px solid #a994ff66;font-size:.85rem;font-weight:700;color:#f7f3ff}
+.payment-disclaimer{color:#c8c9e3;font-size:.77rem;margin:0;max-width:650px}
+.contact-help{color:#c8c9e3;font-size:.85rem;max-width:360px;margin-top:15px}
+@media(max-width:800px){.payment-grid{grid-template-columns:1fr}.payment-card{min-height:0}.payment-bottom{align-items:flex-start;flex-direction:column}}
+@media(max-width:480px){.payment-bottom{padding:22px}.payment-bottom .button{width:100%}}
 
-.pricing-card {
-  background: linear-gradient(145deg, #32315a, #232544);
-  border: 1px solid #66618f88;
-  border-radius: 20px;
-  padding: 26px;
-  display: flex;
-  flex-direction: column;
-  min-height: 310px;
-  transition: transform .35s, border-color .35s,
-              box-shadow .35s;
-}
-
-.pricing-card:hover {
-  transform: translateY(-8px);
-  border-color: #ffce67;
-  box-shadow: 0 20px 48px #07071d77;
-}
-
-.pricing-card h3 {
-  font: 600 1.25rem var(--display);
-  margin-bottom: 12px;
-}
-
-.pricing-price {
-  font: 700 2.6rem var(--display);
-  color: #ffce67;
-  margin-bottom: 18px;
-}
-
-.pricing-card p:not(.eyebrow) {
-  color: #cbd0ea;
-  font-size: .88rem;
-  margin-bottom: 25px;
-}
-
-.pricing-card .button {
-  margin-top: auto;
-  text-align: center;
-}
-
-@media (max-width: 1000px) {
-  .pricing-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 580px) {
-  .pricing-grid {
-    grid-template-columns: 1fr;
-  }
-}
+/* Offres Stripe — intégration de démonstration */
+.offer-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin:28px 0 32px}
+.offer-card{border:1px solid #a994ff66;background:linear-gradient(145deg,#34305b,#222441);padding:24px 19px;border-radius:20px;display:flex;flex-direction:column;gap:16px;box-shadow:0 10px 30px #09091833;transition:transform .3s,border-color .3s,box-shadow .3s}
+.offer-card:nth-child(4n + 2){background:linear-gradient(145deg,#51345f,#262444)}
+.offer-card:nth-child(4n + 3){background:linear-gradient(145deg,#284b60,#252443)}
+.offer-card:hover{transform:translateY(-8px);border-color:#ffce67;box-shadow:0 18px 42px #09091877}
+.offer-top{display:flex;flex-direction:column;gap:10px}.offer-top h3{font-size:1.16rem;line-height:1.3;margin:0}.offer-top strong{font-family:'Space Grotesk',sans-serif;font-size:2rem;color:#ffce67}
+.offer-card p{color:#d3d5ed;line-height:1.55;flex:1;margin:0}.offer-card .button{width:100%;text-align:center;justify-content:center;font-size:.88rem;padding:12px 10px}
+.test-banner{display:flex;flex-wrap:wrap;gap:8px 18px;padding:16px 19px;background:#65e8ef15;border:1px solid #65e8ef70;border-radius:14px;color:#dffaff;margin:18px 0}.test-banner strong{color:#65e8ef}
+@media(max-width:1050px){.offer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.offer-grid{grid-template-columns:1fr}.offer-card{padding:21px}}
+@media(prefers-reduced-motion:reduce){.offer-card{transition:none}.offer-card:hover{transform:none}}

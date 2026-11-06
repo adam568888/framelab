@@ -16,16 +16,8 @@ nav.querySelectorAll("a").forEach((link) => {
 
 document.querySelector("#year").textContent = new Date().getFullYear();
 
-const projectForm = document.querySelector("#project-form");
-const feedback = document.querySelector("#form-feedback");
-
-projectForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  if (!projectForm.reportValidity()) return;
-
-  feedback.textContent =
-    "Merci ! La maquette fonctionne, mais l'envoi réel n'est pas encore connecté. Configure une adresse e-mail ou un backend avant de publier ce formulaire.";
-});
+// Le formulaire est envoyé directement à Formspree via son action HTML.
+// Ne pas intercepter son submit : le navigateur gère la requête POST.
 
 
 // FrameLab — Motion enhancements (respecte les préférences d'accessibilité).
@@ -50,11 +42,11 @@ updateScrollEffects();
 
 if (!reducedMotion) {
   const revealTargets = document.querySelectorAll(
-    ".section-heading, .service-card, .work-card, .step, .contact-layout > div, .contact-form, .price-note, .portfolio-disclaimer"
+    ".section-heading, .service-card, .work-card, .payment-card, .offer-card, .test-banner, .payment-bottom, .step, .contact-layout > div, .contact-form, .price-note, .portfolio-disclaimer"
   );
   revealTargets.forEach((element) => {
     element.classList.add("reveal");
-    if (element.matches(".service-card, .work-card, .step")) element.classList.add("reveal-stagger");
+    if (element.matches(".service-card, .work-card, .payment-card, .offer-card, .step")) element.classList.add("reveal-stagger");
   });
   if ("IntersectionObserver" in window) {
     const revealObserver = new IntersectionObserver((entries, observer) => {
