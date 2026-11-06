@@ -30,3 +30,7 @@ Pour activer les commandes et les paiements, il faudra ajouter :
 Ne mets jamais de clé secrète Stripe dans `script.js`, `index.html` ou un autre fichier envoyé au navigateur. Ne considère jamais le simple retour du navigateur sur une page de succès comme une preuve de paiement.
 
 Avant de vendre, vérifie le statut juridique, la facturation, les obligations fiscales et les règles de vente à distance applicables à ton activité.
+
+
+## Motion Edition
+Animations au défilement, barre de progression, lumière suivant la souris, effet 3D sur le visuel, reflets et bandeau animé. Les animations sont désactivées si l'utilisateur préfère limiter les mouvements. Le formulaire reste une démo sans envoi réel.
